@@ -1,0 +1,111 @@
+.main{
+    min-height: 100vh;
+    background-image: linear-gradient(to bottom, #151515c9, #030303), url('../../../../public/homeNoAuth/backgroundImg.png');
+}
+.containerFlex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+.homeText{
+}
+
+.textTitle{
+    margin-bottom: 20px;
+    font-size:40px ;
+    width:690px;
+    font-weight: bold;
+}
+
+.textParagraph{
+    max-width: 600px;
+    color: #b5d3b5df;
+}
+.btn{
+    font-size: 17px !important;
+    font-weight: bold !important;
+    border: 2px green 2px !important;
+    margin-top: 20px;
+    padding: 10px 30px!important;
+}
+.imgDiv{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.listImg{
+    width: 340px;
+    opacity: 0.6;
+}
+
+@media (max-width: 1199.6px){
+    .textTitle{
+        font-size: 30px;
+        width: 100%;
+    }
+    .textParagraph{
+        font-size: 14px;
+        width: 85%;
+    }
+    .imgDiv{
+        width: 340px;
+    }
+}
+
+@media (max-width:767.5px){
+    .containerFlex{
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 60px;
+    }
+}
+
+@media (max-width: 575.6px){
+    .containerFlex{
+        gap: 10px;
+
+    }
+    .homeText{
+        margin: 0 auto;
+        align-items: center;
+        padding: 0 20px;
+    }
+    .textTitle{
+        font-size: 20px;
+    }
+    .imgDiv{
+        width: 100%;
+    }
+    .listImg{
+        width: 70%;
+    }
+}
+
+@media (max-width: 437.6px){
+    .textParagraph{
+        font-size: 12px;
+    }
+    .btn{
+        font-size: 14px !important;
+        margin: 10px 0;
+        padding: 10px 20px!important;
+    }
+    .textParagraph{
+        width: 100%;
+    }
+}
+
+@media (max-width:320px){
+.textParagraph{
+    font-size: 11px;
+}
+.textTitle{
+    font-size: 15px;
+}
+.btn{
+    font-size: 11px !important;
+    margin: 5px 0;
+    padding: 5px 10px!important;
+}
+}

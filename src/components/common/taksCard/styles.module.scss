@@ -1,0 +1,61 @@
+@import '../../../styles/colors.scss';
+
+.taskCard{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    width: 300px;
+    height: 125px;
+    padding: 20px 10px;
+    transition: 0.4s;
+    
+}
+
+.taskTitle{
+    color: white;
+    font-weight: bold;
+}
+
+.taskInfo{
+    color: rgba(255, 255, 255, 0.836);
+    font-size: 20px;
+}
+
+.taskCardGreen{
+    @extend .taskCard;
+    background-color: #4d684d;
+    &:hover{
+        transform: scale(1.02);
+        background-color: #67a267;
+    }
+}
+
+.taskCardYellow{
+    @extend .taskCard;
+    background-color: #cbad25;
+    &:hover{
+        transform: scale(1.02);
+        background-color: #e1c133;
+    }
+}
+
+.taskCardGray{
+    @extend .taskCard;
+    background-color: #6b6b6b;
+    &:hover{
+        transform: scale(1.02);
+        background-color: #7a7a7a;
+    }
+    .taskInfo{
+        font-size: 18px;
+    }
+}
+
+@media (max-width:385px){
+    .taskCard{
+        padding: 20px 20px;
+        width: 100%;
+    }
+}

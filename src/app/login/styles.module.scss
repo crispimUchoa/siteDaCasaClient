@@ -1,0 +1,59 @@
+.main{
+    min-height: 100vh;
+    background-image:linear-gradient(to bottom, #153515a1, #030303) ,url('../../../public/login/background.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+}
+.iconDiv{
+    position: fixed;
+    top: 10px;
+    left: 10px;
+}
+.icon{
+    color: green !important;
+    width: 30px;
+    height: 30px;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(to bottom, #151515a3, #0f0f0f);
+    width: 500px;
+    padding: 50px 40px;
+    margin: auto;
+    border-radius: 20px;
+}
+.btn{
+    margin-top: 30px;
+}
+
+.input{
+    background-color: transparent !important;
+    color: white !important;
+    border: 1px solid #3f453f !important;
+    &:focus, :active{
+        outline: 4px #0080003e solid !important;
+        
+    }
+}
+
+@media (max-width: 520px){
+    .form{
+        width: 90%;
+ 
+        padding: 50px 30px;
+    }
+}
+@media (max-width: 321px){
+    .label{
+        font-size: 14px;
+    }
+    .form{
+        width: 95%;
+ 
+        padding: 40px 15px;
+    }
+}

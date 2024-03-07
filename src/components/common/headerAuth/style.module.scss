@@ -1,0 +1,56 @@
+
+@import '../../../styles/colors.scss';
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+}
+
+.linksDiv{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.link{
+    color:$myGreen;
+    padding: 3px 5px;
+    border-bottom: 2px solid transparent;
+    transition: 0.4s;
+    &:hover{
+        color: $lighterGreen;
+        border-bottom: 2px solid $lighterGreen;
+    }
+}
+
+.modalBtn{
+    transform: scale(1.3);
+    &:hover{
+        cursor: pointer;
+    }
+}
+
+@media (max-width: 420px){
+    .nav{
+        padding: 10px 0;
+    }
+    .link{
+        font-size: 14px;
+    }
+    .modalBtn{
+        font-size: 14px;
+    }
+   
+}
+
+@media (max-width: 320px){
+    .linksDiv{
+        gap: 10px;
+    }
+}
+
+@media (max-width: 292px){
+    .linksDiv{
+        gap: 3px;
+    }
+}
