@@ -33,13 +33,13 @@ export default function SorteadorSection({notSelected, selected,select, unSelect
             <UserCard user={user} color='success' outline={false} onClick={unSelect} key={user?.id}/>
         )): <p className={styles.noOneSelected}>Nenhum usuário selecionado</p>}
         </div>
-        <Button href={'#luckyDiv'} color='danger' onClick={toRaffle} className={styles.raffleBtn} disabled={selected.length===0}>{!raffled ? 'Sortear' : 'Sortear novamente'}</Button>
-        <div className={styles.luckyDiv} id='luckyDiv'>
+        <Button href={'#luckyName'} color='danger' onClick={toRaffle} className={styles.raffleBtn} disabled={selected.length===0}>{!raffled ? 'Sortear' : 'Sortear novamente'}</Button>
+        <div className={styles.luckyDiv} >
             {raffled && lucky ? 
             <>
             <p className={styles.luckyDeclaration}>E o vencedor foi...</p>
             <img src={`/usersPics/${lucky?.name}.png`} alt="foto do sortudo" className={styles.luckyImg}/>
-            <p className={styles.luckyName}>{lucky.name}</p>
+            <p className={styles.luckyName} id='luckyName'>{lucky.name}</p>
             </>
             : <p></p>}
         </div>
