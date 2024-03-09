@@ -8,7 +8,7 @@ import { Container } from 'reactstrap'
 import TaskCard from '@/components/common/taksCard'
 import TaskSection from '@/components/taskSection'
 
-export default function allTasks(){
+export default function AllTasks(){
     const tasks = useSWR('/area/home', taskServices.getTasks)
     const user = useSWR('/user', userServices.getUser)
     const users = useSWR('/users', userServices.getAllUsers)
