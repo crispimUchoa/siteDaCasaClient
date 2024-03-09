@@ -1,0 +1,15 @@
+.userCard{
+    border-radius: 10px !important;
+    border-width: 2px !important;
+    font-weight: 600px !important;
+    font-size: 17px !important;
+}
+
+@media (max-width: 450px){
+    .userCard{
+        font-size: 12px !important;
+        border-width: 1px !important;
+
+        
+    }
+}

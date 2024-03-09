@@ -1,0 +1,61 @@
+.cardsSection{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin: 30px auto 5px auto;
+}
+
+.noOneSelected{
+    color: #d9d9d9;
+}
+
+.raffleBtn{
+    font-weight: bold !important;
+    padding: 10px 20px !important;
+    margin: 10px auto !important;
+}
+
+.luckyDiv{
+    margin-top: 20px;
+}
+
+.luckyDeclaration{
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.luckyImg{
+    width: 400px;
+    border-radius: 5px;
+}
+
+.luckyName{
+    font-weight: bold;
+    font-size: 35px;
+}
+
+@media (max-width: 450px){
+    .cardsSection{
+        gap: 8px;
+        justify-content: center;
+        margin: 10px auto;
+    }
+    
+    .raffleBtn{
+        margin: 0 !important;
+        font-size: 14px !important;
+    }
+    
+    .luckyDiv{
+        margin-top: 10px;
+    }
+    
+    .luckyImg{
+        width: 95%
+    }
+    
+    .luckyName{
+        font-size: 40px;
+    }
+}
