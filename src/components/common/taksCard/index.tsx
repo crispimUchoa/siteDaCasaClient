@@ -25,7 +25,7 @@ return <>
         
     }>
 
-        <h3 className={styles.taskTitle}>Nome: {task.name}</h3>
+        <h3 className={styles.taskTitle}>{task.name}</h3>
         <h3 className={styles.taskInfo}>
             {taskServices.getTaskUser(task, allUsers).id === currentUser.id ?
              'Sua vez' :
