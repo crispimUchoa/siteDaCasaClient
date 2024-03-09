@@ -3,6 +3,7 @@ import styles from './styles.module.scss'
 import UserCard from '../userCard'
 import { Button } from 'reactstrap'
 import { useState } from 'react'
+import { useRouter } from 'next/navigation'
 
 interface props{
     notSelected: UserType[]
@@ -12,6 +13,7 @@ interface props{
 }
 
 export default function SorteadorSection({notSelected, selected,select, unSelect}:props){
+    const router = useRouter()
     const [raffled, setRaffled] = useState(false)
     const [lucky, setLucky] = useState<UserType>()
 
@@ -19,6 +21,7 @@ export default function SorteadorSection({notSelected, selected,select, unSelect
         const luckyUser = selected.sort((a,b)=>0.5 - Math.random())[0]
         setLucky(luckyUser)
         setRaffled(true)
+        router.push('#luckyName')
     }
 
     return<>
@@ -33,7 +36,7 @@ export default function SorteadorSection({notSelected, selected,select, unSelect
             <UserCard user={user} color='success' outline={false} onClick={unSelect} key={user?.id}/>
         )): <p className={styles.noOneSelected}>Nenhum usuário selecionado</p>}
         </div>
-        <Button href={'#luckyName'} color='danger' onClick={toRaffle} className={styles.raffleBtn} disabled={selected.length===0}>{!raffled ? 'Sortear' : 'Sortear novamente'}</Button>
+        <Button color='danger' onClick={toRaffle} className={styles.raffleBtn} disabled={selected.length===0}>{!raffled ? 'Sortear' : 'Sortear novamente'}</Button>
         <div className={styles.luckyDiv} >
             {raffled && lucky ? 
             <>
