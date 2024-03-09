@@ -15,14 +15,14 @@ export default function HeaderAuth(){
     <nav className={styles.nav}>
         <div className={styles.linksDiv}>
             <Link  href='/area/home'><img src="/houseLogo.png" alt="homeLogo" className="headerLogo" /></Link>
-            <span className={styles.linksSpan}>
+            <div className={styles.linksSpan}>
             <Link className="links" href='/area/myTasks'><span className={styles.link}>Minhas tarefas</span></Link>
             <Link className="links" href='/area/allTasks'><span className={styles.link} >Tarefas</span></Link>
-            </span>
+            </div>
         </div>
         <div className={styles.modalDiv}><span className={styles.modalBtn}>
             <Dropdown isOpen={dropdownOpen} toggle={toggle}>
-                <DropdownToggle caret>
+                <DropdownToggle caret >
             <FaUserCog color='#22ff22'/>
                 </DropdownToggle>
                 <DropdownMenu>

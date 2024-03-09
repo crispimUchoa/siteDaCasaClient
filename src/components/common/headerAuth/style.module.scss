@@ -38,19 +38,22 @@
         font-size: 14px;
     }
     .modalBtn{
-        font-size: 14px;
+        width: 14px;
     }
    
 }
 
-@media (max-width: 320px){
+@media (max-width: 319px){
     .linksDiv{
         gap: 10px;
     }
+   .linksSpan{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    width: 130px;
+    align-items: center;
+   }
 }
 
-@media (max-width: 292px){
-    .linksDiv{
-        gap: 3px;
-    }
-}
+
