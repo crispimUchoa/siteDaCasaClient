@@ -56,6 +56,7 @@ export default function TaskPage(){
     <main className={styles.main}>
         <HeaderAuth/>
         <div className={styles.tableDiv}>
+            <div className={styles.taskName}>{task.name}</div>
             <div className={styles.row}>
                 <div className={styles.divInfos}>
                     <span className={styles.spanId}>ID</span>
