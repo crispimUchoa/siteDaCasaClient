@@ -9,3 +9,23 @@
     margin: 20px 0px;
     width: 50%;
 }
+
+.container{
+    background-color: #0f0f0f91 !important;
+    border-radius: 10px;
+    padding-top: 20px;
+    padding-bottom: 50px;
+}
+
+.apresentationDiv{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+
+.apresentationBtn{
+    height: 50px !important;
+    flex-grow: 1 !important;
+    width: 100% !important;
+}
