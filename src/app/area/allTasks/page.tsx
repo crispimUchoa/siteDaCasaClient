@@ -21,10 +21,9 @@ export default function AllTasks(){
     if(users.error) return <ErrorLoading loading='todos os usuários'/>
     if(user.error) return <ErrorLoading loading='seus dados'/>
     if(tasks.error) return <ErrorLoading loading='tarefas'/>
-    
     return <>
        <main className={styles.main} >
-        <HeaderAuth/>
+        <HeaderAuth windowUrl='https://site-da-casa.vercel.app/area/allTasks'/>
         <Container>
             <TaskSection user={user.data} users={users.data} allTasks={tasks.data}/>
         </Container>

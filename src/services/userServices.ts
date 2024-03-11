@@ -15,7 +15,7 @@ export interface UserType {
 const userServices = {
     getUser: async()=>{
         const token = localStorage.getItem('house-login')
-        console.log(process.env.NEXT_PUBLIC_BASEURL)
+        
         const res = await api.get('user', {
             headers: {
                 Authorization: `Bearer ${token}`
@@ -26,7 +26,7 @@ const userServices = {
     },
     getAllUsers: async()=>{
         const token = localStorage.getItem('house-login')
-        console.log(process.env.NEXT_PUBLIC_BASEURL)
+        
         const res = await api.get('/users', {
             headers: {
                 Authorization: `Bearer ${token}`

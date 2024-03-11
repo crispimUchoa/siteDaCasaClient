@@ -24,7 +24,7 @@ export default function MyTasks(){
     
     return <>
        <main className={styles.main} >
-        <HeaderAuth/>
+       <HeaderAuth windowUrl='https://site-da-casa.vercel.app/area/myTasks'/>
         <Container>
             <TaskSection user={user.data} users={users.data}/>
         </Container>

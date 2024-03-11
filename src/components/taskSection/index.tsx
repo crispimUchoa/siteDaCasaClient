@@ -12,7 +12,6 @@ interface props{
 
 export default function TaskSection({user, users, allTasks}:props){
     if(!user.tasks) return <p>loading...</p>
-    console.log(allTasks)
     return <>
     <main className={styles.main}>
     {!allTasks ? (user.tasks.length>0 ? user.tasks.map((task:TaskType)=>(
