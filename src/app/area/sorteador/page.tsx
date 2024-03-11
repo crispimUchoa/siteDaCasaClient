@@ -8,6 +8,8 @@ import { Container } from "reactstrap"
 import { useEffect } from "react"
 import UserCard from "@/components/sorteador/userCard"
 import SorteadorSection from "@/components/sorteador/sorteadorSection"
+import Loading from "@/components/loading"
+import ErrorLoading from "@/components/errorLoading"
 
 function generateKey(){
     return Math.floor(Math.random()*10000000)
@@ -21,6 +23,9 @@ export default function Sorteador(){
         SetNotSelected(current=>[...users.data])
       }
     },[users.data])
+    
+    if(!users.data) return <Loading loading="usuários"/>
+    if(users.error) return <ErrorLoading loading="usuários"/>
 
     function findUser(id: number){
         const findUser = users.data.filter((user:UserType)=>user.id===id)[0]
@@ -46,8 +51,6 @@ export default function Sorteador(){
         SetNotSelected(notSelec=>[...notSelec, user ])
     }
 
-    if(!users.data) return <p>loading...</p>
-    if(users.error) return <p>loading...</p>
     return<>
     <main className={styles.main}>
         <HeaderAuth/>

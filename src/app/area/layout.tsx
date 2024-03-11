@@ -11,7 +11,7 @@ import { useEffect } from "react";
   }>) {
     const router = useRouter()
     useEffect(()=>{
-        if(!localStorage.getItem('house-login')) {
+        if(!localStorage.getItem('house-login') || localStorage.getItem('house-login')==='') {
             router.push('/login')
           }
     },[])
