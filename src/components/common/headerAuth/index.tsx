@@ -12,7 +12,7 @@ export default function HeaderAuth(){
   const toggle = () => setDropdownOpen((prevState) => !prevState);
 
   const baseUrl = 'https://site-da-casa.vercel.app'
-  const location = window?.location?.href
+  const location = typeof window !='undefined' ? window?.location?.href :''
   
     return <>
     <Container>
