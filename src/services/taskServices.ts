@@ -15,7 +15,6 @@ export interface TaskType {
 const taskServices = {
     getTasks: async()=>{
         const token = localStorage.getItem('house-login')
-        console.log(process.env.NEXT_PUBLIC_BASEURL)
         const res = await api.get('tasks', {
             headers: {
                 Authorization: `Bearer ${token}`
@@ -26,7 +25,6 @@ const taskServices = {
     },
     getTask: async(id: string | number)=>{
         const token = localStorage.getItem('house-login')
-        console.log(process.env.NEXT_PUBLIC_BASEURL)
         const res = await api.get(`task/${id}`, {
             headers: {
                 Authorization: `Bearer ${token}`

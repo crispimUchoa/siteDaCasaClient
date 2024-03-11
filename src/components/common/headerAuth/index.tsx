@@ -10,14 +10,16 @@ export default function HeaderAuth(){
     const [dropdownOpen, setDropdownOpen] = useState(false);
 
   const toggle = () => setDropdownOpen((prevState) => !prevState);
+
+  const baseUrl = process.env.NEXT_PUBLIC_BASEURL
     return <>
     <Container>
     <nav className={styles.nav}>
         <div className={styles.linksDiv}>
             <Link  href='/area/home'><img src="/houseLogo.png" alt="homeLogo" className="headerLogo" /></Link>
             <div className={styles.linksSpan}>
-            <Link className="links" href='/area/myTasks'><span className={styles.link}>Minhas tarefas</span></Link>
-            <Link className="links" href='/area/allTasks'><span className={styles.link} >Tarefas</span></Link>
+            <Link className="links" href='/area/myTasks'><span className={ window.location.href === `${baseUrl}/area/myTasks` ?  styles.linkSelected : styles.link }>Minhas tarefas</span></Link>
+            <Link className="links" href='/area/allTasks'><span className={ window.location.href === `${baseUrl}/area/allTasks` ?  styles.linkSelected : styles.link} >Tarefas</span></Link>
             </div>
         </div>
         <div className={styles.modalDiv}><span className={styles.modalBtn}>
