@@ -11,7 +11,7 @@ export default function HeaderAuth(){
 
   const toggle = () => setDropdownOpen((prevState) => !prevState);
 
-  const baseUrl = process.env.NEXT_PUBLIC_BASEURL
+  const baseUrl = 'https://site-da-casa.vercel.app'
     return <>
     <Container>
     <nav className={styles.nav}>
