@@ -22,16 +22,12 @@
         border-bottom: 2px solid $lighterGreen;
     }
 }
-
 .linkSelected{
-    color:$myGreen;
-    padding: 3px 5px;
+    @extend .link;
+}
+.linkSelected{
     border-bottom: 2px solid $myGreen;
-    transition: 0.4s;
-    &:hover{
-        color: $lighterGreen;
-        border-bottom: 2px solid $lighterGreen;
-    }
+    
 }
 
 .modalBtn{
@@ -45,7 +41,7 @@
     .nav{
         padding: 10px 0;
     }
-    .link{
+    .link, .linkSelected{
         font-size: 14px;
     }
     .modalBtn{
